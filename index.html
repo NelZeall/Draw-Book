@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Zvrljanje</title>
+		<link href="css/canvas_style.css" rel="stylesheet">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+	<header>
+		<ul>
+			<li>
+				<label>Thickness</label>
+				<div class="slider">
+					<input type="range" min="1" max="40" oninput="atrament.weight = parseFloat(event.target.value);" value="2" step="0.1" autocomplete="off"/>
+				</div>
+			</li>
+			<li>
+				<label>Opacity</label>
+				<div class="slider">
+					<input type="range" min="0" max="1" onchange="atrament.opacity = parseFloat(event.target.value);" value="1" step="0.05" autocomplete="off">
+				</div>
+			</li>
+			<li>
+				<label>Smoothing</label>
+				<div class="slideThree">	
+					<input type="checkbox" value="None" id="slideThree" name="check" onchange="atrament.smoothing = event.target.checked;" checked autocomplete="off">
+					<label for="slideThree"></label>
+				</div>
+			</li>
+			<li>
+				<label>Mode</label>
+					<div class="styled-select black rounded">
+						<select onchange="atrament.mode = event.target.value;">
+							<option value="draw" default>Draw</option>
+							<option value="fill" default>Fill</option>
+							<option value="erase" default>Erase</option>
+						</select>	
+					</div>
+			</li>
+			<li>
+				<button id="clear" onclick="event.preventDefault(); atrament.clear();">clear</button>
+			</li>
+			<li> 
+				<button id="download" onclick="downloadImage()"></button>
+	    		<image id="theimage"></image>
+			</li>
+
+		</ul>
+
+	</header>
+		<form>
+			<input id="p-red" onclick="atrament.color = event.target.value;" value="red" autocomplete="off"><br>
+			<input id="p-green" onclick="atrament.color = event.target.value;" value="green" autocomplete="off"><br>
+			<input id="p-violet" onclick="atrament.color = event.target.value;" value="violet" autocomplete="off"><br>
+			<input id="p-blue" onclick="atrament.color = event.target.value;" value="blue" autocomplete="off"><br>
+			<input id="p-yellow" onclick="atrament.color = event.target.value;" value="yellow" autocomplete="off"><br>
+			<input id="p-pink" onclick="atrament.color = event.target.value;" value="pink" autocomplete="off"><br>
+			<input id="p-orange" onclick="atrament.color = event.target.value;" value="orange" autocomplete="off"><br>
+			<input id="p-brown" onclick="atrament.color = event.target.value;" value="brown" autocomplete="off"><br>
+
+		</form>
+		<canvas id="canvas"></canvas>
+		<script src="js/custom.js"></script>
+		<script src="js/custom2.js"></script>
+	</body>
+	<script>
+		var atrament = atrament('canvas', window.innerWidth, window.innerHeight);
+	</script>
+       
+</html>

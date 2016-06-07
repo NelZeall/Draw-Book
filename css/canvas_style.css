@@ -1,0 +1,377 @@
+header {
+    width: 100%;
+    background: grey;
+    z-index: 100000000000;
+    position: fixed;
+    top: 0px;
+}
+header ul {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0px;
+    background-image: url(../img/bg.png);
+    -webkit-transition-property: opacity , padding;
+    transition-property: opacity , padding;
+    -webkit-transition-duration: .35s;
+    transition-duration: .35s;
+    padding-left: 0;
+}
+header ul li {
+    list-style: none;
+    display: inline;
+    padding: 20px;
+    color: white;
+    line-height: 40px;
+}
+canvas {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    background:  url(../img/blob.png);
+}
+form {
+    z-index: 3;
+    position: fixed;
+    top: 50px;
+    right: -50px;
+    background: rgba(0, 0, 0, 0.7);
+    background-image: url(../img/bg.png);
+    padding: 1em;
+    color: white;
+   }
+
+   form input {
+   	 -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+   }
+
+form input:hover{
+ transform: translateX(-30px);
+}
+
+form * {
+    margin-bottom: 1em;
+}
+@media (-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+    form * {
+        font-size: 1.5em;
+    }
+}
+body {
+    font-family: sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+input:focus {
+    outline: none;
+
+}
+
+ /* Pencils */
+
+
+#p-red {
+    background: url(../img/pencils/CpenRed.png);
+    background-size: contain;
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  transition-property: all;
+  transition-property: transform;
+}
+
+#p-green {
+    background: url(../img/pencils/CpenBGreen.png);
+    background-size: contain;
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+#p-violet {
+    background: url(../img/pencils/CpenDViolet.png);
+    background-size: contain;
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+#p-blue {
+    background: url(../img/pencils/CpenDBlue.png);
+    background-size: contain;
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#p-yellow {
+    background: url(../img/pencils/CpenYellow.png);
+    background-size: contain;
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#p-pink {
+    background: url(../img/pencils/CpenPink.png);
+    background-size: contain;
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#p-orange {
+    background: url(../img/pencils/CpenOrange.png);
+    background-size: contain;
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#p-brown {
+    background: url(../img/pencils/CpenBrown.png);
+    background-size: contain;
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+.slider {
+    width: 200px;
+    display: inline-block;
+}
+input[type="range"] {
+    position: relative;
+    top: 5px;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: 20px;
+    margin: 0;
+    border: none;
+    padding: 1px 2px;
+    border-radius: 14px;
+    background: white;
+    box-shadow: inset 0 1px 0 0 #0d0e0f, inset 0 -1px 0 0 #3a3d42;
+    -webkit-box-shadow: inset 0 1px 0 0 #0d0e0f, inset 0 -1px 0 0 #3a3d42;
+    outline: none;
+    /* no focus outline */
+}
+input[type="range"]::-moz-range-track {
+    border: inherit;
+    background: transparent;
+}
+input[type="range"]::-ms-track {
+    border: inherit;
+    color: transparent;
+    /* don't drawn vertical reference line */
+    
+    background: transparent;
+    z-index: 3;
+}
+input[type="range"]::-ms-fill-lower,
+input[type="range"]::-ms-fill-upper {
+    background: transparent;
+}
+input[type="range"]::-ms-tooltip {
+    display: none;
+}
+/* thumb */
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 35px;
+    height: 18px;
+    border: none;
+    border-radius: 12px;
+    background: -webkit-linear-gradient(top, black 0%, #dfe5d7 40%, black 100%);
+    background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #737373 100%);
+    background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #737373 100%);
+    background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #737373 100%);
+    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #737373 100%);
+    z-index: 3;
+}
+input[type="range"]::-moz-range-thumb {
+    width: 40px;
+    height: 18px;
+    border: none;
+    border-radius: 12px;
+    background-image: linear-gradient(to bottom, #529de1 0, #245e8f 100%);
+    /* W3C */
+    
+    z-index: 3;
+}
+input[type="range"]::-ms-thumb {
+    width: 40px;
+    height: 18px;
+    border-radius: 12px;
+    border: 0;
+    background-image: linear-gradient(to bottom, #529de1 0, #245e8f 100%);
+    /* W3C */
+    
+    z-index: 3;
+}
+/* Checkbox */
+
+input[type="checkbox" i] {
+    display: none;
+}
+.slideThree {
+    width: 80px;
+    height: 26px;
+    background: #333;
+    display: inline-block;
+    margin: 5px 0px 0px 0px;
+    position: relative;
+    top: 7px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    position: relative;
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+.slideThree:after {
+    content: 'OFF';
+    font: 12px/26px Arial, sans-serif;
+    color: #000;
+    position: absolute;
+    right: 10px;
+    z-index: 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, .15);
+}
+.slideThree:before {
+    content: 'ON';
+    font: 12px/26px Arial, sans-serif;
+    color: #00bf00;
+    position: absolute;
+    left: 10px;
+    z-index: 0;
+    font-weight: bold;
+}
+.slideThree label {
+    display: block;
+    width: 34px;
+    height: 20px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    transition: all .4s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: 1;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+    background: #fcfff4;
+    background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #737373 100%);
+    background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #737373 100%);
+    background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #737373 100%);
+    background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #737373 100%);
+    background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #737373 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead', GradientType=0);
+}
+.slideThree input[type=checkbox]:checked + label {
+    left: 43px;
+}
+.styled-select {
+   background: #232528;
+    height: 29px;
+    overflow: hidden;
+    width: 100px;
+    display: inline-block;
+    position: relative;
+    top: 7px;
+}
+.styled-select select {
+   background: #232528;
+    border: none;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px;
+    /* If you add too much padding here, the options won't show in IE */
+    
+    width: 108px;
+    position: relative;
+    top: -5px;
+    width: 100%;
+}
+
+.rounded {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.black {
+   background: #232528;
+}
+.black select {
+    color: #fff;
+}
+
+.black select:focus {
+	outline: none;
+}
+
+#clear {
+	background: #232528;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 5px;
+    border: 0px;
+    position: relative;
+    top: -3px;
+    cursor: pointer;
+}
+
+#clear:focus {
+	outline: none;
+}
+
+#download {
+	background: url(../img/save_inv.png);
+	background-repeat: no-repeat;
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    background-size: contain;
+    padding: 20px;
+    cursor: pointer;
+	border: none;
+    background-color: transparent;
+    -webkit-transition: all .2s ease-in-out;
+	-moz-transition:  all .2s ease-in-out;
+	-o-transition:  all .2s ease-in-out;
+	transition:  all .2s ease-in-out;
+   }
+
+#download:hover {
+	transform: scale(1.1);
+}
+
+
+	
